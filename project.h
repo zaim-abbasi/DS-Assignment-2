@@ -39,6 +39,8 @@ public:
         int numResources;
         cout << "Enter number of resources: ";
         cin >> numResources;
+
+        //validation
         if (numResources <= 0)
         {
             cout << "Invalid number of resources!" << endl;
@@ -109,6 +111,8 @@ public:
         // Input number of tasks
         cout << "Enter number of tasks: ";
         cin >> numTasks;
+
+        //validation
         if (numTasks <= 0)
         {
             cout << "Invalid number of tasks!" << endl;
@@ -143,7 +147,7 @@ public:
             Skill *taskSkill;
 
             // Input task skill
-            if (i == 0)
+            if (i == 0)        // yani 1st task ha
             {
                 currentTask = new Task(duration, taskSkill, nullptr, 0, 0);
                 currentTask->earlyStart = 0;
@@ -312,7 +316,7 @@ public:
         // Calculate lateStart and slack for all tasks, starting from the last task
         currentTask = lastTask;
 
-        // ab left ko use kar ke last task se pehle wale task ko calculate karo
+        // ab last task se pehle wale task ko calculate karna ha
         cout << "Task ID" << setw(15) << "Early Start" << setw(15) << "Early Finish" << setw(15) << "Late Start" << setw(15) << "Late Finish" << setw(15) << "Slack" << endl;
 
         // end tak chalao

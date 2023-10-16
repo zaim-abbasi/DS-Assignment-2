@@ -16,7 +16,6 @@ public:
     Task *next;
     int dependency1;
     int dependency2;
-    // int dependency;
     int earlyStart;
     int earlyFinish;
     int lateStart;
